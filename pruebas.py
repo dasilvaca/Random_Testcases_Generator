@@ -1,0 +1,1 @@
+next(x for x in itertools.imap(lambda x: random.randint(min_n,max_n)|1,itertools.count()) if eval(condition))
