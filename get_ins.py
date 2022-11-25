@@ -133,18 +133,8 @@ class FormatInput:
         # ? The lists and matrices can have its own format given by the user.
 
         
-        return NotImplementedError
+        raise NotImplementedError
 
-        # self.condition = condition
-
-    def get_format_input(self):
-        return next(
-            x
-            for x in itertools.imap(
-                lambda x: random.randint(self.min_n, self.max_n) | 1, itertools.count()
-            )
-            if eval(self.condition)
-        )
 
 
 class IntegerRandoms:
@@ -164,12 +154,15 @@ class IntegerRandoms:
 
 
 class FloatRandoms:
-    def __init__(self, min_n, max_n, condition: str = "True"):
+    def __init__(self, min_n, max_n, condition: str = "True", format: int = 2):
         self.min_n = min_n
         self.max_n = max_n
         self.condition = condition
+        self.format = format
 
     def get_random(self):
+        ##! return a random float number with *format* decimals
+
         return next(
             x
             for x in map(

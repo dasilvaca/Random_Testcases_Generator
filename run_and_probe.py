@@ -11,3 +11,5 @@ import get_ins
 floats = get_ins.FloatRandoms(0, 100)
 
 print(floats.get_random())
+
+# x = get_ins.InputGenerator()
