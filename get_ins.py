@@ -168,13 +168,13 @@ class BooleanRandoms:
     def __init__(self, format: str = ""):
         self.format = format
 
-    def getRandomBool(self):
+    def get_random(self):
         bool_value = random.randint(0, 1)
-        if self.format == "lettersUCC":
+        if self.format == "lettersUCC": #Upper camelCase
             return self.bools[bool_value].upper()
-        elif self.format == "lettersL":
+        elif self.format == "lettersL": #lower
             return self.bools[bool_value].lower()
-        elif self.format == "lettersU":
+        elif self.format == "lettersU": #upper
             return self.bools[bool_value].capitalize()
         return self.bools[bool_value]
 
@@ -250,8 +250,6 @@ class StringRandom:
                     string.ascii_lowercase + string.digits,
                     k=random.randint(self.min_length, self.max_length),
                 )
-                if eval(self.condition)
-                else self.get_random()
             )
 
             return res
@@ -279,19 +277,11 @@ class ListRandom:
 
     def get_random(self):
         if self.content_type == "Any":
+
             print("hey")
             #!for each element of list (min, max), request content_type
         # else:
         #     for i in range(self.ength):
-
-
-# class DataList:
-
-#     content_types = FormatInput.input_types
-
-#     def __init__(
-#         self,
-#     ):
 
 
 class InputGenerator:
