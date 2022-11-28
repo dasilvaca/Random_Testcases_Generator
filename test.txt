@@ -1,0 +1,7 @@
+CreateInteger ( 6 , 12 , condition = "x>10" , name = integer_1 )
+CreateFloat ( 20.0 , 50.0 , condition = "x>integer_1" , name = p )
+CreateBoolean ( format = "lettersUCC" )
+CreateChar ( min_length = 90 , max_length = 128)
+CreatePermutation ( 20 )
+CreateList ( min_length = 12 , max_length = 12 )
+CreateString ( word_set = [ 'a' , 'b' , 'c' , 'd' ] )
